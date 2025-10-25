@@ -1,0 +1,147 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_6e4a2e81d7f0490eb05b53c444a1dc54
+  created: 1760816199634
+  modified: 1760816199634
+  description: ""
+collection:
+  - name: Livros
+    meta:
+      id: fld_863c06aa14884377aa8edb8550b4652d
+      created: 1760816210552
+      modified: 1760816210552
+      sortKey: -1760816210552
+      description: ""
+    children:
+      - url: http://localhost:8080/Livros
+        name: cadastrarLivros
+        meta:
+          id: req_12ec3567d0094bde948cc388723247e6
+          created: 1760816221942
+          modified: 1761409530690
+          isPrivate: false
+          description: ""
+          sortKey: -1760816221942
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"tituloLivro":"Diario de um banana",
+            	"anoLivro":"2010",
+            	"qtdeLivro":"20",
+            	"nomeAutor":"Jeff Kinney"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/Livros
+        name: listarLivros
+        meta:
+          id: req_b9b2c407db9d4b0187cb7002b6b391eb
+          created: 1760816228195
+          modified: 1761409901535
+          isPrivate: false
+          description: ""
+          sortKey: -1760816228195
+        method: GET
+        parameters:
+          - id: pair_82a4887d06ec4bb280c8d9c8c266676a
+            name: titulo
+            value: dom
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: autores
+    meta:
+      id: fld_7d92a99bb8a141ad891f35afbff4770f
+      created: 1761403605596
+      modified: 1761403605596
+      sortKey: -1761403605596
+      description: ""
+    children:
+      - url: http://localhost:8080/Autores
+        name: CadastrarAutor
+        meta:
+          id: req_0e98b71c68814d7bb4502abe4469ff2b
+          created: 1761403609177
+          modified: 1761408946576
+          isPrivate: false
+          description: ""
+          sortKey: -1761403609177
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeAutor":"homero",
+            	"nacionalidadeAutor":"grecia"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/Autores
+        name: ListarAutor
+        meta:
+          id: req_0f02f6e4909041b085cb76e98ac441a0
+          created: 1761408746872
+          modified: 1761408764855
+          isPrivate: false
+          description: ""
+          sortKey: -1761408746872
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_47d711cd165e5d4b736bbcf74b4dee726d0617b5
+    created: 1760816199660
+    modified: 1760816199660
+environments:
+  name: Base Environment
+  meta:
+    id: env_47d711cd165e5d4b736bbcf74b4dee726d0617b5
+    created: 1760816199648
+    modified: 1760816199648
+    isPrivate: false
