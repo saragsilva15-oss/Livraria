@@ -1,9 +1,14 @@
 const express = require("express");
 const app = express();
+const{ autorRoute } = require("./src/routes/autorRoute");
 const {livroRoute} = require("./src/routes/livroRoute");
 const PORT = 8080;
 
 app.use(express.json());
+
+//Rotas de aplicação de Autores
+
+app.use('/',autorRoute)
 
 //Rotas de aplicação de livros
 
